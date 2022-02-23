@@ -3,7 +3,7 @@ const logonse = require("morgan");
 const mangosse = require("mongoose");
 const compressionada = require("compression");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
 const app = exprssor();
