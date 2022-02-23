@@ -1,22 +1,22 @@
-const exprssor = require("express");
-const logonse = require("morgan");
-const mangosse = require("mongoose");
-const compressionada = require("compression");
+const express = require("express");
+const logger = require("morgan");
+const mongoose = require("mongoose");
+const compression = require("compression");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
-const app = exprssor();
+const app = express();
 
-app.use(logonse("dev"));
+app.use(logger("dev"));
 
-app.use(compressionada());
-app.use(exprssor.urlencoded({ extended: true }));
-app.use(exprssor.json());
+app.use(compression());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.use(exprssor.static("public"));
+app.use(express.static("public"));
 
-mangosse.connect(MONGODB_URI || 'mongodb://localhost:3001/budget', {
+mongoose.connect(MONGODB_URI || 'mongodb://localhost:27017/budget', {
   useNewUrlParser: true,
   useFindAndModify: false
 });
