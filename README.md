@@ -1,4 +1,4 @@
- #Budget-Tracker
+ # Budget-Tracker
   
   ![MIT License](https://img.shields.io/static/v1?label=License&message=MIT%20License&color=green)
   
