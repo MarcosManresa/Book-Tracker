@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const transactionSchema = new Schema(
+const TransfictionSchema = new Schema(
   {
     name: {
       type: String,
@@ -20,6 +20,6 @@ const transactionSchema = new Schema(
   }
 );
 
-const Transaction = mongoose.model("Transaction", transactionSchema);
+const Transfiction = mongoose.model("Transaction", TransfictionSchema);
 
-module.exports = Transaction;
+module.exports = Transfiction;
